@@ -1,0 +1,53 @@
+/**
+ *
+ * @author Angie T
+ */
+public class RoulettePocket {
+    
+    private int number;
+    private String color;
+    
+    public RoulettePocket(int n){
+        number = n;
+        if(number == 0){
+            color = "green";
+        }
+        else if(number >= 1 && number <= 10){
+            if(number % 2 == 0){
+                color = "black";
+            }
+            else{
+                color = "red";
+            }
+        }
+        else if(number >= 11 && number <= 18){
+            if(number % 2 == 0){
+                color = "red";
+            }
+            else{
+                color = "black";
+            }
+        }
+        else if(number >= 19 && number <= 28){
+            if(number % 2 == 0){
+                color = "black";
+            }
+            else{
+                color = "red";
+            }
+        }
+        else if(number >= 29 && number <= 36){
+            if(number % 2 == 0){
+                color = "red";
+            }
+            else{
+                color = "black";
+            }
+        }
+    }
+    
+    public String getPocketColor(){
+        return color;
+    }
+    
+}
