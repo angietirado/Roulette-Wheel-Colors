@@ -1,0 +1,30 @@
+/**
+ *
+ * @author Angie Tirado
+ */
+import java.util.Scanner;
+public class RouletteWheelColorsDriver {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        
+        int userNum;
+        
+        Scanner userInput = new Scanner(System.in);
+        
+        System.out.println("Enter a pocket number: ");
+        
+        userNum = userInput.nextInt();
+      
+        
+        while(userNum < 0 || userNum > 36){
+            System.out.println("Enter a pocket number that is greater than 0 and less than 36");
+            
+            userNum = userInput.nextInt();
+        }
+        
+        RoulettePocket num = new RoulettePocket(userNum);
+            
+        System.out.println(num.getPocketColor());
+    }
+}
